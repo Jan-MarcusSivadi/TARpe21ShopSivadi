@@ -1,0 +1,14 @@
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\bin\Debug\net6.0\TARpe21ShopSivadi.Core.deps.json
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\bin\Debug\net6.0\TARpe21ShopSivadi.Core.runtimeconfig.json
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\bin\Debug\net6.0\TARpe21ShopSivadi.Core.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\bin\Debug\net6.0\TARpe21ShopSivadi.Core.pdb
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.csproj.AssemblyReference.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.AssemblyInfoInputs.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.AssemblyInfo.cs
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.csproj.CoreCompileInputs.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\refint\TARpe21ShopSivadi.Core.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.pdb
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\TARpe21ShopSivadi.Core.genruntimeconfig.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Core\obj\Debug\net6.0\ref\TARpe21ShopSivadi.Core.dll

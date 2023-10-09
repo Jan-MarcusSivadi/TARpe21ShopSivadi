@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev Projects\\School\\Programmeerimine\\MAUI_workshop\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj": {}
+    "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj": {}
   },
   "projects": {
-    "D:\\Dev Projects\\School\\Programmeerimine\\MAUI_workshop\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj": {
+    "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev Projects\\School\\Programmeerimine\\MAUI_workshop\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj",
+        "projectUniqueName": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj",
         "projectName": "TARpe21ShopSivadi.Core",
-        "projectPath": "D:\\Dev Projects\\School\\Programmeerimine\\MAUI_workshop\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj",
+        "projectPath": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj",
         "packagesPath": "C:\\Users\\Jan-Marcus\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev Projects\\School\\Programmeerimine\\MAUI_workshop\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\obj\\",
+        "outputPath": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,13 +45,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "CommunityToolkit.Mvvm": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[6.0.22, )"
             },
-            "Microsoft.Extensions.Logging.Debug": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.22, )"
             }
           },
           "imports": [
