@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "9et1vs2Pu3M1S9nG4L/+a0Iuhmd1wJPgu18tRQpdc3OCaMyQTTcUvVoJH8+VYAAr9VRs47vK9kQDvdjIWsE5Hg==",
+  "success": true,
+  "projectFilePath": "D:\\Dev Projects\\School\\Programmeerimine\\MAUI_workshop\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Data\\TARpe21ShopSivadi.Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\microsoft.extensions.logging.debug\\7.0.0\\microsoft.extensions.logging.debug.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jan-Marcus\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
