@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using TARpe21ShopSivadi.Core.Domain.Spaceship;
 
-namespace TARpe21ShopSivadi.Models
+namespace TARpe21ShopSivadi.Models.Spaceship
 {
     public class SpaceshipIndexViewModel
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TARpe21ShopSivadi.Data;
-using TARpe21ShopSivadi.Models;
+using TARpe21ShopSivadi.Models.Spaceship;
 
 namespace TARpe21ShopSivadi.Controllers
 {
