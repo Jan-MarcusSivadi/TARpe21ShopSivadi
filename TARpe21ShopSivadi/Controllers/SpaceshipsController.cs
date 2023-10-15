@@ -23,7 +23,11 @@ namespace TARpe21ShopSivadi.Controllers
                     PassengerCount = x.PassengerCount,
                     EnginePower = x.EnginePower,
                 });
-            return View();
+            return View(result);
+        }
+        public IActionResult Add()
+        {
+            return View("Edit");
         }
     }
 }
