@@ -8,8 +8,6 @@
     ".NETCoreApp,Version=v6.0": {
       "TARpe21ShopSivadi/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.22",
-          "Microsoft.EntityFrameworkCore.Design": "6.0.22",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.22",
           "TARpe21ShopSivadi.Data": "1.0.0"
         },

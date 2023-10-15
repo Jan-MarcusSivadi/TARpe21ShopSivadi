@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TARpe21ShopSivadi.Pages
+namespace TARpe21ShopSivadi.Views.Home
 {
     public class IndexModel : PageModel
     {
