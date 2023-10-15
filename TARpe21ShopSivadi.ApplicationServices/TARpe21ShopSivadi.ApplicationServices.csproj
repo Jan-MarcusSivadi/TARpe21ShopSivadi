@@ -18,4 +18,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TARpe21ShopSivadi.Data\TARpe21ShopSivadi.Data.csproj" />
+  </ItemGroup>
+
 </Project>

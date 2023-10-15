@@ -13,7 +13,7 @@ namespace TARpe21ShopSivadi.Controllers
         }
         public IActionResult Index()
         {
-            var result = _context.spaceships
+            var result = _context.Spaceships
                 .OrderBy(x => x.CreatedAt)
                 .Select(x => new SpaceshipIndexViewModel
                 {

@@ -8,7 +8,7 @@ using TARpe21ShopSivadi.Core.Domain.Spaceship;
 
 namespace TARpe21ShopSivadi.Core.Dto
 {
-    internal class SpaceshipDto
+    public class SpaceshipDto
     {
         [Key]
         public Guid? Id { get; set; } // globally unique identifier

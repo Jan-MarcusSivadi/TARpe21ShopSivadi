@@ -11,6 +11,6 @@ namespace TARpe21ShopSivadi.Data
     public class TARpe21ShopSivadiContext : DbContext
     {
         public TARpe21ShopSivadiContext(DbContextOptions<TARpe21ShopSivadiContext> options) : base(options) { }
-        public DbSet<Spaceship> spaceships { get; set; }
+        public DbSet<Spaceship> Spaceships { get; set; }
     }
 }

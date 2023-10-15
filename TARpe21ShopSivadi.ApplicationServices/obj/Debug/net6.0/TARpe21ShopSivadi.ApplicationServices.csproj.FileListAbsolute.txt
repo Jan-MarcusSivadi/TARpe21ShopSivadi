@@ -12,3 +12,8 @@ D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Appl
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\obj\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.pdb
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\obj\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.genruntimeconfig.cache
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\obj\Debug\net6.0\ref\TARpe21ShopSivadi.ApplicationServices.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\bin\Debug\net6.0\TARpe21ShopSivadi.Core.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\bin\Debug\net6.0\TARpe21ShopSivadi.Data.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\bin\Debug\net6.0\TARpe21ShopSivadi.Data.pdb
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\bin\Debug\net6.0\TARpe21ShopSivadi.Core.pdb
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.ApplicationServices\obj\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.csproj.CopyComplete
