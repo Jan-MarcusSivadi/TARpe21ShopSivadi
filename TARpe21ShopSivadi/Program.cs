@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using TARpe21ShopSivadi.Core.ServiceInterface;
 using TARpe21ShopSivadi.Data;
+using TARpe21ShopSivadi.ApplicationServices.Services;
 
 public class Program
 {
@@ -11,6 +13,7 @@ public class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
         builder.Services.AddDbContext<TARpe21ShopSivadiContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        builder.Services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
 
         var app = builder.Build();
 

@@ -783,6 +783,20 @@
           }
         }
       },
+      "TARpe21ShopSivadi.ApplicationServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.22",
+          "TARpe21ShopSivadi.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TARpe21ShopSivadi.ApplicationServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TARpe21ShopSivadi.ApplicationServices.dll": {}
+        }
+      },
       "TARpe21ShopSivadi.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2032,6 +2046,11 @@
         "version.txt"
       ]
     },
+    "TARpe21ShopSivadi.ApplicationServices/1.0.0": {
+      "type": "project",
+      "path": "../TARpe21ShopSivadi.ApplicationServices/TARpe21ShopSivadi.ApplicationServices.csproj",
+      "msbuildProject": "../TARpe21ShopSivadi.ApplicationServices/TARpe21ShopSivadi.ApplicationServices.csproj"
+    },
     "TARpe21ShopSivadi.Core/1.0.0": {
       "type": "project",
       "path": "../TARpe21ShopSivadi.Core/TARpe21ShopSivadi.Core.csproj",
@@ -2046,6 +2065,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.22",
+      "TARpe21ShopSivadi.ApplicationServices >= 1.0.0",
       "TARpe21ShopSivadi.Data >= 1.0.0"
     ]
   },
@@ -2082,6 +2102,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.ApplicationServices\\TARpe21ShopSivadi.ApplicationServices.csproj": {
+              "projectPath": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.ApplicationServices\\TARpe21ShopSivadi.ApplicationServices.csproj"
+            },
             "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Data\\TARpe21ShopSivadi.Data.csproj": {
               "projectPath": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Data\\TARpe21ShopSivadi.Data.csproj"
             }
