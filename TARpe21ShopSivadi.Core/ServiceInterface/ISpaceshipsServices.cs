@@ -11,5 +11,7 @@ namespace TARpe21ShopSivadi.Core.ServiceInterface
     public interface ISpaceshipsServices
     {
         Task<Spaceship> Add(SpaceshipDto dto);
+        Task<Spaceship> Update(SpaceshipDto dto);
+        Task<Spaceship> GetUpdate(Guid id);
     }
 }
