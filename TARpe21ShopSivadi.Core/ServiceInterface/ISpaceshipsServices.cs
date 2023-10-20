@@ -14,5 +14,6 @@ namespace TARpe21ShopSivadi.Core.ServiceInterface
         Task<Spaceship> GetUpdate(Guid id);
         Task<Spaceship> Update(SpaceshipDto dto);
         Task<Spaceship> Delete(Guid id);
+        Task<Spaceship> GetAsync(Guid id);
     }
 }

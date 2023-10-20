@@ -93,5 +93,11 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
 
             return spaceshipId;
         }
+        public async Task<Spaceship> GetAsync(Guid id)
+        {
+            var result = await _context.Spaceships
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return result;
+        }
     }
 }
