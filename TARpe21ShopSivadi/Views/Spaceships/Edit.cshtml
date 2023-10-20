@@ -1,5 +1,5 @@
 ﻿@model TARpe21ShopSivadi.Models.Spaceship.SpaceshipEditViewModel;
-@if (Model != null && Model.Id.HasValue)
+@if (Model != null)
 {
     <h1>Update</h1>
 }
@@ -125,9 +125,14 @@ else
                 <input asp-for="LastMaintenance" class="form-control" />
             </div>
         </div>
-        <input asp-action="Add" asp-controller="Spaceships" type="submit" class="btn btn-primary" value="Add"/>
-        <a asp-action="Edit" asp-controller="Spaceships" class="btn btn-primary">Edit</a>
-        <input asp-action="Update" asp-controller="Spaceships" type="submit" class="btn btn-primary" value="Update"/>
+        @if (Model != null)
+        {
+            <input asp-action="Update" asp-controller="Spaceships" type="submit" class="btn btn-primary" value="Update"/>
+        } else
+        {
+            <input asp-action="Add" asp-controller="Spaceships" type="submit" class="btn btn-primary" value="Add"/>
+        }
+        <a asp-action="Index" asp-controller="Spaceships" class="btn btn-primary">Cancel</a>
 
     </form>
 </div>

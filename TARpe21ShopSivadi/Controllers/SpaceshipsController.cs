@@ -133,5 +133,15 @@ namespace TARpe21ShopSivadi.Controllers
             }
             return RedirectToAction(nameof(Index), vm);
         }
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var spaceshipId = await _spaceshipsServices.Delete(id);
+            if (spaceshipId == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
