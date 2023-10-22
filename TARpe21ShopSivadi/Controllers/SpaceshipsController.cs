@@ -33,12 +33,14 @@ namespace TARpe21ShopSivadi.Controllers
             return View(result);
         }
         [HttpGet]
-        public IActionResult Add()
+        public IActionResult Create()
         {
-            return View("Edit");
+            //return View("Edit");
+            SpaceshipCreateUpdateViewModel spaceship = new SpaceshipCreateUpdateViewModel();
+            return View("CreateUpdate", spaceship);
         }
         [HttpPost]
-        public async Task<IActionResult> Add(SpaceshipEditViewModel vm)
+        public async Task<IActionResult> Create(SpaceshipCreateUpdateViewModel vm)
         {
             var dto = new SpaceshipDto()
             {
@@ -62,7 +64,7 @@ namespace TARpe21ShopSivadi.Controllers
                 CreatedAt = vm.CreatedAt,
                 ModifiedAt = vm.ModifiedAt
             };
-            var result = await _spaceshipsServices.Add(dto);
+            var result = await _spaceshipsServices.Create(dto);
             if (result == null)
             {
                 return RedirectToAction(nameof(Index));
@@ -70,14 +72,14 @@ namespace TARpe21ShopSivadi.Controllers
             return RedirectToAction(nameof(Index), vm);
         }
         [HttpGet]
-        public async Task<IActionResult> Edit(Guid id)
+        public async Task<IActionResult> Update(Guid id)
         {
-            var spaceship = await _spaceshipsServices.GetUpdate(id);
+            var spaceship = await _spaceshipsServices.GetAsync(id);
             if (spaceship == null)
             {
                 return NotFound();
             }
-            var vm = new SpaceshipEditViewModel()
+            var vm = new SpaceshipCreateUpdateViewModel()
             {
                 Id = spaceship.Id,
                 Name = spaceship.Name,
@@ -99,10 +101,10 @@ namespace TARpe21ShopSivadi.Controllers
                 CreatedAt = spaceship.CreatedAt,
                 ModifiedAt = spaceship.ModifiedAt
             };
-            return View(vm);
+            return View("CreateUpdate", vm);
         }
         [HttpPost]
-        public async Task<IActionResult> Update(SpaceshipEditViewModel vm)
+        public async Task<IActionResult> Update(SpaceshipCreateUpdateViewModel vm)
         {
             var dto = new SpaceshipDto
             {
