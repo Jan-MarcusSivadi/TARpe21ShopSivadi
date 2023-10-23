@@ -11,5 +11,7 @@ namespace TARpe21ShopSivadi.Core.ServiceInterface
     public interface IFilesServices
     {
         void UploadFilesToDatabase(SpaceshipDto dto, Spaceship domain);
+        Task<FileToDatabase> RemoveImage(FileToDatabaseDto dto);
+        Task<List<FileToDatabase>> RemoveImagesFromDatabase(FileToDatabaseDto[] dtos);
     }
 }

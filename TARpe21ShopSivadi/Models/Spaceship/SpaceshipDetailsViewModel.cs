@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TARpe21ShopSivadi.Core.Dto;
 
 namespace TARpe21ShopSivadi.Models.Spaceship
 {
@@ -23,7 +24,7 @@ namespace TARpe21ShopSivadi.Models.Spaceship
         public int FuelConsumptionPerDay { get; set; } // fuel consumed in a days worth of space traveled at maximum speed
         public int MaintenanceCount { get; set; } // how many maintenance sessions have been conducted on this ship
         public DateTime LastMaintenance { get; set; } // when was the last maintenance performed
-
+        public List<ImageViewModel> Image { get; set; } = new List<ImageViewModel>(); // images themselves that are added
 
         // only in database
 

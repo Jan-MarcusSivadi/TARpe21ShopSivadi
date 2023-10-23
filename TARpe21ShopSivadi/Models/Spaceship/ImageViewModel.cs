@@ -1,8 +1,10 @@
-﻿namespace TARpe21ShopSivadi.Models.Spaceship
+﻿using TARpe21ShopSivadi.Core.Dto;
+
+namespace TARpe21ShopSivadi.Models.Spaceship
 {
     public class ImageViewModel
     {
-        public Guid Id { get; set; }
+        public Guid ImageId { get; set; }
         public string ImageTitle { get; set; }
         public byte[] ImageData { get; set; }
         public string Image { get; set; }
