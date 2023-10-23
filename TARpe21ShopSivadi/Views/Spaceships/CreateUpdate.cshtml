@@ -130,6 +130,10 @@ else
                 <input asp-for="LastMaintenance" class="form-control" />
             </div>
         </div>
+        @foreach (var images in Model.Image)
+        {
+            <partial name="_Images" model="images" />
+        }
         @if (Model.Id.HasValue)
         {
             <input asp-action="Update" asp-controller="Spaceships" type="submit" class="btn btn-primary" value="Update"/>
@@ -141,3 +145,8 @@ else
 
     </form>
 </div>
+@section Scripts {
+    <script>
+        // $(document).ready(function() )
+    </script>
+}
