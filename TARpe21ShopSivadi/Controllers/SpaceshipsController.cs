@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TARpe21ShopSivadi.ApplicationServices.Services;
 using System.Xml.Linq;
 using TARpe21ShopSivadi.Core.Dto;
 using TARpe21ShopSivadi.Core.ServiceInterface;
@@ -151,7 +152,14 @@ namespace TARpe21ShopSivadi.Controllers
                 MaintenanceCount = vm.MaintenanceCount,
                 LastMaintenance = vm.LastMaintenance,
                 CreatedAt = vm.CreatedAt,
-                ModifiedAt = vm.ModifiedAt
+                Files = vm.Files,
+                Image = vm.Image.Select(x => new FileToDatabaseDto
+                {
+                    Id = x.ImageId,
+                    ImageData = x.ImageData,
+                    ImageTitle = x.ImageTitle,
+                    SpaceshipId = x.SpaceshipId,
+                }).ToArray()
             };
             var result = await _spaceshipsServices.Update(dto);
             if (result == null)
