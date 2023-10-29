@@ -48,7 +48,7 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             realEstate.DoesHaveParkingSpace = dto.DoesHaveParkingSpace;
             realEstate.DoesHavePowerGridConnection = dto.DoesHavePowerGridConnection;
             realEstate.DoesHaveWaterGridConnection = dto.DoesHaveWaterGridConnection;
-            realEstate.EstateType = (Core.Domain.EstateType)dto.EstateType;
+            realEstate.Type = (Core.Domain.EstateType)dto.Type;
             realEstate.IsPropertyNewDevelopment = dto.IsPropertyNewDevelopment;
             realEstate.IsPropertySold = dto.IsPropertySold;
             realEstate.CreatedAt = dto.CreatedAt;

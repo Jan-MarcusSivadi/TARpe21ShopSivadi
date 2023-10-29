@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TARpe21ShopSivadi.Core.Dto;
 using TARpe21ShopSivadi.Core.ServiceInterface;
 using TARpe21ShopSivadi.Data;
 using TARpe21ShopSivadi.Models.RealEstate;
@@ -30,6 +31,34 @@ namespace TARpe21ShopSivadi.Controllers
                     IsPropertySold = x.IsPropertySold,
                 });
             return View(result);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create(RealEstateCreateUpdateViewModel vm)
+        {
+            var dto = new RealEstateDto()
+            {
+                Id = vm.Id,
+                Address = vm.Address,
+                City = vm.City,
+                Country = vm.Country,
+                SquareMeters = vm.SquareMeters,
+                Price = vm.Price,
+                PostalCode = vm.PostalCode,
+                PhoneNumber = vm.PhoneNumber,
+                FaxNumber = vm.FaxNumber,
+                ListingDescription = vm.ListingDescription,
+                BuildDate = vm.BuildDate,
+                RoomCount = vm.RoomCount,
+                FloorCount = vm.FloorCount,
+                EstateFloor = vm.EstateFloor,
+                Bathrooms = vm.Bathrooms,
+                Bedrooms = vm.Bedrooms,
+                DoesHaveParkingSpace = vm.DoesHaveParkingSpace,
+                DoesHavePowerGridConnection = vm.DoesHavePowerGridConnection,
+                DoesHaveWaterGridConnection = vm.DoesHaveWaterGridConnection,
+                Type = (Core.Dto.EstateType)vm.Type
+            };
+            return View(dto);
         }
     }
 }
