@@ -1,0 +1,17 @@
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.deps.json
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.runtimeconfig.json
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.pdb
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Core.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Core.pdb
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.AssemblyReference.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.AssemblyInfoInputs.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.AssemblyInfo.cs
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.CoreCompileInputs.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.CopyComplete
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\refint\TARpe21ShopSivadi.Data.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.pdb
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.genruntimeconfig.cache
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\ref\TARpe21ShopSivadi.Data.dll
