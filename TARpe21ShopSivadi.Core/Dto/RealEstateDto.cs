@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace TARpe21ShopSivadi.Core.Dto
     }
     public class RealEstateDto
     {
-        public Guid Id { get; set; } // unique id
+        public Guid? Id { get; set; } // unique id
         public string Address { get; set; } // street name, house number, flat number.  "Tulika 14-6"
         public string? City { get; set; } //city where realestate is, city is optional incase the 
         public string Country { get; set; } //what country estate is in
@@ -40,6 +41,8 @@ namespace TARpe21ShopSivadi.Core.Dto
 
         public bool IsPropertyNewDevelopment { get; set; } //shows if the estate being sold is a newly developed housing unit, or an older existing one
         public bool IsPropertySold { get; set; } //shows if the property has been sold already 
+        public List<IFormFile> Files { get; set; } // Files that are to be added to this real estate
+        public IEnumerable<FileToApiDto> FilesToApiDtos { get; set; } = new List<FileToApiDto>(); // files themselves that are added
 
         //database only properties
 

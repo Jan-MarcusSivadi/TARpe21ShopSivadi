@@ -14,16 +14,18 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
     public class RealEstatesServices : IRealEstatesServices
     {
         private readonly TARpe21ShopSivadiContext _context;
-        public RealEstatesServices(TARpe21ShopSivadiContext context)
+        private readonly IFilesServices _filesServices;
+        public RealEstatesServices(TARpe21ShopSivadiContext context,IFilesServices filesServices)
         {
             _context = context;
+            _filesServices = filesServices;
         }
 
-        public async Task<RealEstate> GetAsync()
+        public async Task<RealEstate> GetAsync(Guid id)
         {
-            //var result = await _context.RealEstates
-            //    .FirstOrDefaultAsync(x => x.Id == id);
-            return null;
+            var result = await _context.RealEstates
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return result;
         }
         public async Task<RealEstate> Create(RealEstateDto dto)
         {
@@ -53,10 +55,51 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             realEstate.IsPropertySold = dto.IsPropertySold;
             realEstate.CreatedAt = dto.CreatedAt;
             realEstate.ModifiedAt = dto.ModifiedAt;
+            _filesServices.FilesToApi(dto, realEstate);
 
             await _context.RealEstates.AddAsync(realEstate);
             await _context.SaveChangesAsync();
             return realEstate;
+        }
+        public async Task<RealEstate> Update(RealEstateDto dto)
+        {
+            var domain = new RealEstate()
+            {
+                Id = Guid.NewGuid(),
+                Address = dto.Address,
+                City = dto.City,
+                Country = dto.Country,
+                County = dto.County,
+                PostalCode = dto.PostalCode,
+                FaxNumber = dto.FaxNumber,
+                ListingDescription = dto.ListingDescription,
+                SquareMeters = dto.SquareMeters,
+                BuildDate = dto.BuildDate,
+                Price = dto.Price,
+                RoomCount = dto.RoomCount,
+                EstateFloor = dto.EstateFloor,
+                Bathrooms = dto.Bathrooms,
+                Bedrooms = dto.Bedrooms,
+                DoesHaveParkingSpace = dto.DoesHaveParkingSpace,
+                DoesHavePowerGridConnection = dto.DoesHavePowerGridConnection,
+                DoesHaveWaterGridConnection = dto.DoesHaveWaterGridConnection,
+                Type = dto.Type,
+                IsPropertyNewDevelopment = dto.IsPropertyNewDevelopment,
+                IsPropertySold = dto.IsPropertySold,
+                CreatedAt = dto.CreatedAt,
+                ModifiedAt = DateTime.Now
+            };
+            _context.RealEstates.Update(domain);
+            await _context.SaveChangesAsync();
+            return domain;
+        }
+        public async Task<RealEstate> Delete(Guid id)
+        {
+            var realEstateId = await _context.RealEstates
+                .FirstOrDefaultAsync(x => x.Id == id);
+            _context.RealEstates.Remove(realEstateId);
+            await _context.SaveChangesAsync();
+            return realEstateId;
         }
     }
 }

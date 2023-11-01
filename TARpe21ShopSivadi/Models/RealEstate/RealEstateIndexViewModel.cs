@@ -2,8 +2,7 @@
 {
     public class RealEstateIndexViewModel
     {
-
-        public Guid Id { get; set; } // unique id
+        public Guid? Id { get; set; } // unique id
         public string Address { get; set; } // street name, house number, flat number.  "Tulika 14-6"
         public string? City { get; set; } //city where realestate is, city is optional incase the 
         public string Country { get; set; } //what country estate is in

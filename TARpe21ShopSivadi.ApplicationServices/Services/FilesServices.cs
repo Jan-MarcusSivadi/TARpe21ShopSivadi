@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,15 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
     public class FilesServices : IFilesServices
     {
         private readonly TARpe21ShopSivadiContext _context;
+        private readonly IHostingEnvironment _webHost;
         public FilesServices
             (
-                TARpe21ShopSivadiContext context
+                TARpe21ShopSivadiContext context,
+                IHostingEnvironment webHost
             )
         {
             _context = context;
+            _webHost = webHost;
         }
         public void UploadFilesToDatabase(SpaceshipDto dto, Spaceship domain)
         {
@@ -65,6 +69,33 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                 await _context.SaveChangesAsync();
             }
             return null;
+        }
+        public void FilesToApi(RealEstateDto dto, RealEstate realEstate)
+        {
+            if (dto.Files != null && dto.Files.Count > 0)
+            {
+                if (!Directory.Exists(_webHost.WebRootPath + "\\multipleFileUpdload\\"))
+                {
+                    Directory.CreateDirectory(_webHost.WebRootPath + "\\multipleFileUpdload\\");
+                }
+                foreach (var image in dto.Files)
+                {
+                    string uploadsFolder = Path.Combine(_webHost.WebRootPath, "multipleFileUpload");
+                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        image.CopyTo(fileStream);
+                        FileToApi path = new FileToApi()
+                        {
+                            Id = Guid.NewGuid(),
+                            ExistingFilePath = filePath,
+                            RealEstateId = realEstate.Id,
+                        };
+                        _context.FilesToApi.AddAsync(path);
+                    }
+                }
+            }
         }
     }
 }
