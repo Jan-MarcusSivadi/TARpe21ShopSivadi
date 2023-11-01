@@ -37,10 +37,11 @@ namespace TARpe21ShopSivadi.Controllers
         {
             var dto = new RealEstateDto()
             {
-                Id = vm.Id,
+                Id = Guid.NewGuid(),
                 Address = vm.Address,
                 City = vm.City,
                 Country = vm.Country,
+                County = vm.County,
                 SquareMeters = vm.SquareMeters,
                 Price = vm.Price,
                 PostalCode = vm.PostalCode,
@@ -56,9 +57,18 @@ namespace TARpe21ShopSivadi.Controllers
                 DoesHaveParkingSpace = vm.DoesHaveParkingSpace,
                 DoesHavePowerGridConnection = vm.DoesHavePowerGridConnection,
                 DoesHaveWaterGridConnection = vm.DoesHaveWaterGridConnection,
-                Type = (Core.Dto.EstateType)vm.Type
+                Type = vm.Type,
+                IsPropertyNewDevelopment = vm.IsPropertyNewDevelopment,
+                IsPropertySold = vm.IsPropertySold,
+                CreatedAt = DateTime.Now,
+                ModifiedAt = DateTime.Now,
             };
-            return View(dto);
+            var result = await _realEstates.Create(dto);
+            if (result == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction("Index", vm);
         }
     }
 }

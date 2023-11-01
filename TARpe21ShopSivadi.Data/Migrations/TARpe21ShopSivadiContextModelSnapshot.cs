@@ -123,8 +123,9 @@ namespace TARpe21ShopSivadi.Data.Migrations
                     b.Property<int>("SquareMeters")
                         .HasColumnType("int");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
