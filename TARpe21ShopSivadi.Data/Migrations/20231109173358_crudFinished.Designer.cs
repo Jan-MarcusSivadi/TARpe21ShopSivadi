@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TARpe21ShopSivadi.Data;
 
@@ -11,9 +12,10 @@ using TARpe21ShopSivadi.Data;
 namespace TARpe21ShopSivadi.Data.Migrations
 {
     [DbContext(typeof(TARpe21ShopSivadiContext))]
-    partial class TARpe21ShopSivadiContextModelSnapshot : ModelSnapshot
+    [Migration("20231109173358_crudFinished")]
+    partial class crudFinished
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,8 +38,6 @@ namespace TARpe21ShopSivadi.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("RealEstateId");
 
                     b.ToTable("FilesToApi");
                 });
@@ -66,7 +66,7 @@ namespace TARpe21ShopSivadi.Data.Migrations
 
             modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.RealEstate", b =>
                 {
-                    b.Property<Guid?>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -219,18 +219,6 @@ namespace TARpe21ShopSivadi.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Spaceships");
-                });
-
-            modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.FileToApi", b =>
-                {
-                    b.HasOne("TARpe21ShopSivadi.Core.Domain.RealEstate", null)
-                        .WithMany("FilesToApi")
-                        .HasForeignKey("RealEstateId");
-                });
-
-            modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.RealEstate", b =>
-                {
-                    b.Navigation("FilesToApi");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,13 +14,16 @@ namespace TARpe21ShopSivadi.Controllers
     {
         private readonly IRealEstatesServices _realEstates;
         private readonly TARpe21ShopSivadiContext _context;
+        private readonly IFilesServices _filesServices;
         public RealEstatesController(
             IRealEstatesServices realEstates,
-            TARpe21ShopSivadiContext context
+            TARpe21ShopSivadiContext context,
+            IFilesServices filesServices
             )
         {
             _realEstates = realEstates;
             _context = context;
+            _filesServices = filesServices;
         }
         public IActionResult Index()
         {
@@ -90,7 +93,6 @@ namespace TARpe21ShopSivadi.Controllers
             }
             return RedirectToAction("Index", vm);
         }
-        //TODO: ADD UPDATE METHOD HERE
         [HttpGet]
         public async Task<IActionResult> Update(Guid id)
         {
@@ -142,7 +144,7 @@ namespace TARpe21ShopSivadi.Controllers
         {
             var dto = new RealEstateDto()
             {
-                Id = vm.Id,
+                Id = (Guid)vm.Id,
                 Address = vm.Address,
                 City = vm.City,
                 Country = vm.Country,
@@ -274,6 +276,20 @@ namespace TARpe21ShopSivadi.Controllers
         {
             var realEstate = await _realEstates.GetAsync(id);
             if (realEstate == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpPost]
+        public async Task<IActionResult> RemoveImage(FileToApiViewModel vm)
+        {
+            var dto = new FileToApiDto()
+            {
+                Id = vm.ImageId
+            };
+            var image = await _filesServices.RemoveImageFromApi(dto);
+            if (image == null)
             {
                 return RedirectToAction(nameof(Index));
             }
