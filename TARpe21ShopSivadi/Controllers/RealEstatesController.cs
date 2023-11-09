@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Xml;
 using TARpe21ShopSivadi.Core.Domain;
 using TARpe21ShopSivadi.Core.Dto;
@@ -13,7 +14,10 @@ namespace TARpe21ShopSivadi.Controllers
     {
         private readonly IRealEstatesServices _realEstates;
         private readonly TARpe21ShopSivadiContext _context;
-        public RealEstatesController(IRealEstatesServices realEstates, TARpe21ShopSivadiContext context)
+        public RealEstatesController(
+            IRealEstatesServices realEstates,
+            TARpe21ShopSivadiContext context
+            )
         {
             _realEstates = realEstates;
             _context = context;
@@ -37,7 +41,7 @@ namespace TARpe21ShopSivadi.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            RealEstateCreateUpdateViewModel realEstate = new RealEstateCreateUpdateViewModel();
+            RealEstateCreateUpdateViewModel realEstate = new();
             return View("CreateUpdate", realEstate);
         }
         [HttpPost]
@@ -70,6 +74,14 @@ namespace TARpe21ShopSivadi.Controllers
                 IsPropertySold = vm.IsPropertySold,
                 CreatedAt = DateTime.Now,
                 ModifiedAt = DateTime.Now,
+                Files = vm.Files,
+                FilesToApiDtos = vm.FileToApiViewModels
+                .Select(z => new FileToApiDto
+                {
+                    Id = z.ImageId,
+                    ExistingFilePath = z.FilePath,
+                    RealEstateId = z.RealEstateId,
+                }).ToArray()
             };
             var result = await _realEstates.Create(dto);
             if (result == null)
@@ -87,6 +99,13 @@ namespace TARpe21ShopSivadi.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+                .Where(x => x.RealEstateId == id)
+                .Select(y => new FileToApiViewModel
+                {
+                    FilePath = y.ExistingFilePath,
+                    ImageId = y.Id
+                }).ToArrayAsync();
             var vm = new RealEstateCreateUpdateViewModel();
 
             vm.Id = realEstate.Id;
@@ -114,6 +133,7 @@ namespace TARpe21ShopSivadi.Controllers
             vm.IsPropertySold = realEstate.IsPropertySold;
             vm.CreatedAt = realEstate.CreatedAt;
             vm.ModifiedAt = realEstate.ModifiedAt;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View("CreateUpdate", vm);
         }
@@ -173,10 +193,16 @@ namespace TARpe21ShopSivadi.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+                .Where(x => x.RealEstateId == id)
+                .Select(y => new FileToApiViewModel
+                {
+                    FilePath = y.ExistingFilePath,
+                    ImageId = y.Id
+                }).ToArrayAsync();
 
             var vm = new RealEstateDetailsViewModel();
 
-            //TODO: COPY PASTE FROM ...
             vm.Id = realEstate.Id;
             vm.Address = realEstate.Address;
             vm.City = realEstate.City;
@@ -200,6 +226,9 @@ namespace TARpe21ShopSivadi.Controllers
             vm.Type = realEstate.Type;
             vm.IsPropertyNewDevelopment = realEstate.IsPropertyNewDevelopment;
             vm.IsPropertySold = realEstate.IsPropertySold;
+            vm.CreatedAt = realEstate.CreatedAt;
+            vm.ModifiedAt = realEstate.ModifiedAt;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View(vm);
         }
