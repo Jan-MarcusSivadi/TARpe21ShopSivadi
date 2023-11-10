@@ -242,6 +242,13 @@ namespace TARpe21ShopSivadi.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+                .Where(x => x.RealEstateId == id)
+                .Select(y => new FileToApiViewModel
+                {
+                    FilePath = y.ExistingFilePath,
+                    ImageId = y.Id
+                }).ToArrayAsync();
 
             var vm = new RealEstateDeleteViewModel();
 
@@ -268,6 +275,7 @@ namespace TARpe21ShopSivadi.Controllers
             vm.Type = realEstate.Type;
             vm.IsPropertyNewDevelopment = realEstate.IsPropertyNewDevelopment;
             vm.IsPropertySold = realEstate.IsPropertySold;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View(vm);
         }
