@@ -6,10 +6,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using TARpe21ShopSivadi.Core.Dto.WeatherDtos;
+using TARpe21ShopSivadi.Core.ServiceInterface;
 
 namespace TARpe21ShopSivadi.ApplicationServices.Services
 {
-    public class WeatherForecastsServices
+    public class WeatherForecastsServices : IWeatherForecastsServices
     {
         public async Task<WeatherResultDto> WeatherDetail(WeatherResultDto dto)
         {
