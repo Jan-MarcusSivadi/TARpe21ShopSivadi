@@ -16,7 +16,7 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
     {
         public async Task<(WeatherResultDto, int)> WeatherDetail(WeatherResultDto dto)
         {
-            var url = $"http://dataservice.accuweather.com/forecasts/v1/daily/1day/127964?apikey=MB31TSBu9F92e0GEFGzPWlEJvaQLZno2&metric=true";
+            var url = $"http://dataservice.accuweather.com/forecasts/v1/daily/1day/127964?apikey=ajoMB4nzkuQLNPJTKxFdGdGWDaSepqsg&metric=true";
 
             int statusCode = 200;
             WebClient client = new WebClient();
