@@ -72,3 +72,8 @@ D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\TARpe21ShopSivadi.pdb
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\TARpe21ShopSivadi.genruntimeconfig.cache
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\ref\TARpe21ShopSivadi.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\bin\Debug\net6.0\Nancy.dll
+D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi\bin\Debug\net6.0\Newtonsoft.Json.dll
