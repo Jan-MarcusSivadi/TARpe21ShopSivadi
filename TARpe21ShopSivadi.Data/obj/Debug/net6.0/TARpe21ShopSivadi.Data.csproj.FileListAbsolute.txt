@@ -15,3 +15,20 @@ D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.pdb
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.genruntimeconfig.cache
 D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\ref\TARpe21ShopSivadi.Data.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.deps.json
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.runtimeconfig.json
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Data.pdb
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Core.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\bin\Debug\net6.0\TARpe21ShopSivadi.Core.pdb
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.AssemblyReference.cache
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.AssemblyInfoInputs.cache
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.AssemblyInfo.cs
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.CoreCompileInputs.cache
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.CopyComplete
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\refint\TARpe21ShopSivadi.Data.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.pdb
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\TARpe21ShopSivadi.Data.genruntimeconfig.cache
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi.Data\obj\Debug\net6.0\ref\TARpe21ShopSivadi.Data.dll
