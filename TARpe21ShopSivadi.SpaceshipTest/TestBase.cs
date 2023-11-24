@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,7 @@ using TARpe21ShopSivadi.ApplicationServices.Services;
 using TARpe21ShopSivadi.Core.ServiceInterface;
 using TARpe21ShopSivadi.Data;
 using TARpe21ShopSivadi.SpaceshipTest.Macros;
+using TARpe21ShopSivadi.SpaceshipTest.Mock;
 
 namespace TARpe21ShopSivadi.SpaceshipTest
 {
@@ -37,7 +38,7 @@ namespace TARpe21ShopSivadi.SpaceshipTest
         {
             services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
             services.AddScoped<IFilesServices, FilesServices>();
-            services.AddScoped<IHostingEnvironment>();
+            services.AddScoped<IHostingEnvironment, MockHostingEnvironment>();
 
             services.AddDbContext<TARpe21ShopSivadiContext>
                 (x =>
