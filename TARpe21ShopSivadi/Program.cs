@@ -16,6 +16,7 @@ public class Program
         builder.Services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
         builder.Services.AddScoped<IFilesServices, FilesServices>();
         builder.Services.AddScoped<IRealEstatesServices, RealEstatesServices>();
+        builder.Services.AddScoped<ICarsServices, CarsServices>();
         builder.Services.AddScoped<IWeatherForecastsServices, WeatherForecastsServices>();
 
         var app = builder.Build();

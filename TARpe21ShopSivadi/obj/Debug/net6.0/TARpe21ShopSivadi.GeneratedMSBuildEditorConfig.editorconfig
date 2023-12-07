@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Dev Projects\School\Programmeerimine\TARpe21ShopSivadi\TARpe21ShopSivadi
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Dev Projects/School/Programmeerimine/TARpe21ShopSivadi/TARpe21ShopSivadi/Views/Cars/CreateUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGVVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dev Projects/School/Programmeerimine/TARpe21ShopSivadi/TARpe21ShopSivadi/Views/Cars/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

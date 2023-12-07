@@ -1,7 +1,15 @@
-﻿namespace TARpe21ShopSivadi.Models.Car
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TARpe21ShopSivadi.Core.Dto
 {
-    public class CarIndexViewModel
+    public class CarDto
     {
+        [Key]
         public Guid? Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

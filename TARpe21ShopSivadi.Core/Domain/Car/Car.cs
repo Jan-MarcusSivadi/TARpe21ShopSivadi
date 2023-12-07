@@ -10,7 +10,7 @@ namespace TARpe21ShopSivadi.Core.Domain
     public class Car
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string ExteriorColor { get; set; } // what color is the exterior of car
