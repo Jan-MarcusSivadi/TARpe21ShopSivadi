@@ -22,6 +22,114 @@ namespace TARpe21ShopSivadi.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.Car", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("BuiltAtDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("DoesHaveExtendedCab")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Drive")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Engine")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EnginePower")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ExteriorColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FuelConsumptionPerHour")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GearType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("HasConditioner")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasHeatedSeats")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HasTouchscreen")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("InteriorColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCarPreviouslyOwned")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsElectric")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSteeringLeft")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsTransmissionManual")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastMaintenance")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MaintenanceCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Manufacturer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaxSpeed")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumOfSeats")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumOfWheels")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PassengerCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WindowColor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cars");
+                });
+
             modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.FileToApi", b =>
                 {
                     b.Property<Guid>("Id")
