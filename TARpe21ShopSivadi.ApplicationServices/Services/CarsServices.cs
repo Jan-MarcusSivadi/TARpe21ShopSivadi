@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -65,6 +66,47 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             var result = await _context.Cars
                 .FirstOrDefaultAsync(x => x.Id == id);
             return result;
+        }
+
+        public async Task<Car> Update(CarDto dto)
+        {
+            var domain = new Car
+            {
+                Id = dto.Id,
+                Name = dto.Name,
+                Description = dto.Description,
+                ExteriorColor = dto.ExteriorColor,
+                InteriorColor = dto.InteriorColor,
+                WindowColor = dto.WindowColor,
+                IsSteeringLeft = dto.IsSteeringLeft,
+                NumOfSeats = dto.NumOfSeats,
+                PassengerCount = dto.PassengerCount,
+                HasConditioner = dto.HasConditioner,
+                HasHeatedSeats = dto.HasHeatedSeats,
+                HasTouchscreen = dto.HasTouchscreen,
+                DoesHaveExtendedCab = dto.DoesHaveExtendedCab,
+                IsElectric = dto.IsElectric,
+                Type = dto.Type,
+                GearType = dto.GearType,
+                IsTransmissionManual = dto.IsTransmissionManual,
+                Engine = dto.Engine,
+                EnginePower = dto.EnginePower,
+                Drive = dto.Drive,
+                MaxSpeed = dto.MaxSpeed,
+                FuelConsumptionPerHour = dto.FuelConsumptionPerHour,
+                Manufacturer = dto.Manufacturer,
+                IsCarPreviouslyOwned = dto.IsCarPreviouslyOwned,
+                BuiltAtDate = dto.BuiltAtDate,
+                MaintenanceCount = dto.MaintenanceCount,
+                LastMaintenance = dto.LastMaintenance,
+                CreatedAt = dto.CreatedAt,
+                ModifiedAt = DateTime.Now,
+            };
+            // update images
+
+            _context.Cars.Update(domain);
+            await _context.SaveChangesAsync();
+            return domain;
         }
     }
 }
