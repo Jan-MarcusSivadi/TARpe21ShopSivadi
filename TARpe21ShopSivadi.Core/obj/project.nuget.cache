@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c2YtPLVZWRomNRZIpENN/ILOkpRT9vrbovTo3gZ3k7AcqbT10gCxSqVQ3Jl7+8/oDTqXG2cG9JoNj8yY7YI9QA==",
+  "dgSpecHash": "HfvBwlQoM2Ljds9/l9t5CkjXjnXb73Qmqnfxtu68NVl3ZQzLquO14ZlP2axyxDwqyq7m8jYuXVTxtstdl5xJ6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi.Core\\TARpe21ShopSivadi.Core.csproj",
   "expectedPackageFiles": [
@@ -26,12 +26,12 @@
     "C:\\Users\\opilane\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
-    "C:\\Users\\opilane\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\opilane\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
