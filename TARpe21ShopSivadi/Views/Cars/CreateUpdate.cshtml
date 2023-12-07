@@ -12,81 +12,220 @@ else
         <input asp-for="Id" type="hidden" />
         <input asp-for="CreatedAt" type="hidden" />
         <input asp-for="ModifiedAt" type="hidden" />
-
+        
         <div class="form-group row">
             <label asp-for="Name" class="col-sm-2 col-form-label"></label>
             <div class="col-sm-10">
                 <input asp-for="Name" class="form-control" />
             </div>
-
-            <div class="form-group row">
-                <label asp-for="PassengerCount" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-10">
-                    <input asp-for="PassengerCount" class="form-control" />
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label asp-for="EnginePower" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-10">
-                    <input asp-for="EnginePower" class="form-control" />
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label asp-for="Manufacturer" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-10">
-                    <input asp-for="Manufacturer" class="form-control" />
-                </div>
-            </div>
-
-            @*Replace with a working dropdown box later on*@
-            <div class="form-group row">
-                <label asp-for="Type" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-10">
-                    <input asp-for="Type" class="form-control" />
-                </div>
-            </div>
-
-            @* <div class="form-group row">
-                <label asp-for="IsPropertySold" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-10">
-                    <input asp-for="IsPropertySold" class="form-check-input" />
-                </div>
-            </div>
-
-            <div>
-                <label asp-for="Files" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-5">
-                    <div class="custom-file">
-                        <input class="form-control custom-file-input" asp-for="Files" multiple type="file" />
-                        <label class="custom-file-label">Choose File...</label>
-                    </div>
-                </div>
-            </div> *@
-
-            <hr />
-
-            @* @if (Model.FileToApiViewModels != null)
-            {
-                @foreach (var images in Model.FileToApiViewModels)
-                {
-                    <partial name="_Images" model="images" />
-                    <input asp-action="removeImage" asp-controller="realEstates" asp-route-imageID="@images.ImageId" type="submit" class="btn btn-danger" value="Remove Image" />
-                }
-            } *@
-
-            @if (Model.Id.HasValue)
-            {
-                <input asp-action="update" asp-controller="cars" type="submit" class="btn btn-primary" value="Update" />
-            }
-            else
-            {
-                <input asp-action="create" asp-controller="cars" type="submit" class="btn btn-primary" value="Create" />
-            }
-
-            <a asp-action="Index" class="btn btn-primary">Back</a>
         </div>
+
+        <div class="form-group row">
+            <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Description" class="form-control" />
+            </div>
+        </div>
+
+        @*Replace with a working dropdown box later on*@
+        <div class="form-group row">
+            <label asp-for="Type" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Type" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="IsElectric" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="IsElectric" class="form-check-input" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="ExteriorColor" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="ExteriorColor" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="InteriorColor" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="InteriorColor" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="WindowColor" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="WindowColor" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="IsSteeringLeft" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="IsSteeringLeft" class="form-check-input" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="NumOfSeats" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="NumOfSeats" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="NumOfWheels" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="NumOfWheels" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="PassengerCount" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="PassengerCount" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="FuelConsumptionPerHour" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="FuelConsumptionPerHour" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Engine" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Engine" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="EnginePower" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="EnginePower" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="MaxSpeed" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="MaxSpeed" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="Drive" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Drive" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="GearType" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="GearType" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="IsTransmissionManual" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="IsTransmissionManual" class="form-check-input" />
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label asp-for="Manufacturer" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Manufacturer" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="HasConditioner" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="HasConditioner" class="form-check-input" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="HasHeatedSeats" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="HasHeatedSeats" class="form-check-input" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="HasTouchscreen" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="HasTouchscreen" class="form-check-input" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="DoesHaveExtendedCab" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="DoesHaveExtendedCab" class="form-check-input" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="IsCarPreviouslyOwned" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="IsCarPreviouslyOwned" class="form-check-input" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="BuiltAtDate" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="BuiltAtDate" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="MaintenanceCount" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="MaintenanceCount" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="LastMaintenance" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="LastMaintenance" class="form-control" />
+            </div>
+        </div>
+
+        <hr />
+
+        @* @if (Model.FileToApiViewModels != null)
+        {
+            @foreach (var images in Model.FileToApiViewModels)
+            {
+                <partial name="_Images" model="images" />
+                <input asp-action="removeImage" asp-controller="realEstates" asp-route-imageID="@images.ImageId" type="submit" class="btn btn-danger" value="Remove Image" />
+            }
+        } *@
+
+        @if (Model.Id.HasValue)
+        {
+            <input asp-action="update" asp-controller="cars" type="submit" class="btn btn-primary" value="Update" />
+        }
+        else
+        {
+            <input asp-action="create" asp-controller="cars" type="submit" class="btn btn-primary" value="Create" />
+        }
+
+        <a asp-action="Index" class="btn btn-primary">Back</a>
+        
 
     </form>
 </div>
