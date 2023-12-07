@@ -61,6 +61,7 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             return car;
         }
 
+
         public async Task<Car> GetAsync(Guid id)
         {
             var result = await _context.Cars
@@ -107,6 +108,14 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             _context.Cars.Update(domain);
             await _context.SaveChangesAsync();
             return domain;
+        }
+        public async Task<Car> Delete(Guid id)
+        {
+            var carId = await _context.Cars
+                .FirstOrDefaultAsync(x => x.Id == id);
+            _context.Cars.Remove(carId);
+            await _context.SaveChangesAsync();
+            return carId;
         }
     }
 }

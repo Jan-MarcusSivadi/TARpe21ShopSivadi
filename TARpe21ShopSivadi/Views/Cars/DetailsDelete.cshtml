@@ -1,5 +1,12 @@
-﻿@model TARpe21ShopSivadi.Models.Car.CarDetailsViewModel
-<h1>Details</h1>
+﻿@model TARpe21ShopSivadi.Models.Car.CarDetailsDeleteViewModel
+@if (Model.IsDelete)
+{
+    <h1>Delete</h1>
+}
+else
+{
+    <h1>Details</h1>
+}
 <div>
     <h4>Car</h4>
     <hr />
@@ -156,6 +163,16 @@
         </div>
 
     </dl>
-
-    <a asp-action="Index" asp-controller="cars" class="btn btn-primary">Back</a>
 </div>
+<hr />
+@if (Model.IsDelete)
+{
+    <form asp-action="DeleteConfirmation">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" asp-controller="cars" class="btn btn-primary">Back</a>
+    </form>
+} else
+{
+    <a asp-action="Index" asp-controller="cars" class="btn btn-primary">Back</a>
+}
