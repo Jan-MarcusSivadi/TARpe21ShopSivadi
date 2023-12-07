@@ -32,6 +32,49 @@ namespace TARpe21ShopSivadi.Controllers
             return View(result);
         }
         [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var car = await _carsServices.GetAsync(id);
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            var vm = new CarDetailsViewModel();
+            vm.Id = car.Id;
+            vm.Name = car.Name;
+            vm.Description = car.Description;
+            vm.Type = car.Type;
+            vm.IsElectric = car.IsElectric;
+            vm.ExteriorColor = car.ExteriorColor;
+            vm.InteriorColor = car.InteriorColor;
+            vm.WindowColor = car.WindowColor;
+            vm.IsSteeringLeft = car.IsSteeringLeft;
+            vm.NumOfSeats = car.NumOfSeats;
+            vm.NumOfWheels = car.NumOfWheels;
+            vm.PassengerCount = car.PassengerCount;
+            vm.FuelConsumptionPerHour = car.FuelConsumptionPerHour;
+            vm.Engine = car.Engine;
+            vm.EnginePower = car.EnginePower;
+            vm.MaxSpeed = car.MaxSpeed;
+            vm.Drive = car.Drive;
+            vm.GearType = car.GearType;
+            vm.IsTransmissionManual = car.IsTransmissionManual;
+            vm.Manufacturer = car.Manufacturer;
+            vm.HasConditioner = car.HasConditioner;
+            vm.HasHeatedSeats = car.HasHeatedSeats;
+            vm.HasTouchscreen = car.HasTouchscreen;
+            vm.DoesHaveExtendedCab = car.DoesHaveExtendedCab;
+            vm.IsCarPreviouslyOwned = car.IsCarPreviouslyOwned;
+            vm.BuiltAtDate = car.BuiltAtDate;
+            vm.MaintenanceCount = car.MaintenanceCount;
+            vm.LastMaintenance = car.LastMaintenance;
+            vm.ModifiedAt = car.ModifiedAt;
+            vm.CreatedAt = car.CreatedAt;
+
+            return View(vm);
+        }
+        [HttpGet]
         public IActionResult Create()
         {
             CarCreateUpdateViewModel viewModel = new();

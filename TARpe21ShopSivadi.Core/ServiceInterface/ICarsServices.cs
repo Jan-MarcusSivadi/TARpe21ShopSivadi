@@ -11,5 +11,6 @@ namespace TARpe21ShopSivadi.Core.ServiceInterface
     public interface ICarsServices
     {
         Task<Car> Create(CarDto dto);
+        Task<Car> GetAsync(Guid id);
     }
 }

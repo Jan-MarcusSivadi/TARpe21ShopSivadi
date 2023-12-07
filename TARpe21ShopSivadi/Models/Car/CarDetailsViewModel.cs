@@ -2,7 +2,7 @@
 
 namespace TARpe21ShopSivadi.Models.Car
 {
-    public class CarIndexViewModel
+    public class CarDetailsViewModel
     {
         [Key]
         public Guid? Id { get; set; }

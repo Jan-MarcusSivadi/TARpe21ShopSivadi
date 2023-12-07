@@ -26,31 +26,31 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
 
             car.Id = Guid.NewGuid();
             car.Name = dto.Name;
-            car.Description = "";
-            car.ExteriorColor = "black";
-            car.InteriorColor = "white";
-            car.WindowColor = "transparent";
-            car.IsSteeringLeft = true;
-            car.NumOfSeats = 4;
+            car.Description = dto.Description;
+            car.ExteriorColor = dto.ExteriorColor;
+            car.InteriorColor = dto.InteriorColor;
+            car.WindowColor = dto.WindowColor;
+            car.IsSteeringLeft = dto.IsSteeringLeft;
+            car.NumOfSeats = dto.NumOfSeats;
             car.PassengerCount = dto.PassengerCount;
-            dto.HasConditioner = true;
-            dto.HasHeatedSeats = false;
-            dto.HasTouchscreen = false;
-            dto.DoesHaveExtendedCab = false;
-            dto.IsElectric = false;
+            car.HasConditioner = dto.HasConditioner;
+            car.HasHeatedSeats = dto.HasHeatedSeats;
+            car.HasTouchscreen = dto.HasTouchscreen;
+            car.DoesHaveExtendedCab = dto.DoesHaveExtendedCab;
+            car.IsElectric = dto.IsElectric;
             car.Type = dto.Type;
-            car.GearType = "automatic";
-            car.IsTransmissionManual = false;
-            car.Engine = "yourEngineHere";
+            car.GearType = dto.GearType;
+            car.IsTransmissionManual = dto.IsTransmissionManual;
+            car.Engine = dto.Engine;
             car.EnginePower = dto.EnginePower;
-            car.Drive = "AWD";
-            car.MaxSpeed = 250;
-            car.FuelConsumptionPerHour = 40;
+            car.Drive = dto.Drive;
+            car.MaxSpeed = dto.MaxSpeed;
+            car.FuelConsumptionPerHour = dto.FuelConsumptionPerHour;
             car.Manufacturer = dto.Manufacturer;
-            car.IsCarPreviouslyOwned = false;
-            car.BuiltAtDate = DateTime.Now;
-            car.MaintenanceCount = 0;
-            car.LastMaintenance = DateTime.Now;
+            car.IsCarPreviouslyOwned = dto.IsCarPreviouslyOwned;
+            car.BuiltAtDate = dto.BuiltAtDate;
+            car.MaintenanceCount = dto.MaintenanceCount;
+            car.LastMaintenance = dto.LastMaintenance;
             car.CreatedAt = dto.CreatedAt;
             car.ModifiedAt = dto.ModifiedAt;
             // TODO: upload images
@@ -58,6 +58,13 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             await _context.Cars.AddAsync(car);
             await _context.SaveChangesAsync();
             return car;
+        }
+
+        public async Task<Car> GetAsync(Guid id)
+        {
+            var result = await _context.Cars
+                .FirstOrDefaultAsync(x => x.Id == id);
+            return result;
         }
     }
 }
