@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using TARpe21ShopSivadi.Core.Domain;
 using TARpe21ShopSivadi.Core.Dto;
 using TARpe21ShopSivadi.Core.ServiceInterface;
@@ -37,7 +38,30 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                         {
                             Id = Guid.NewGuid(),
                             ImageTitle = photo.FileName,
-                            SpaceshipId = domain.Id,
+                            EntityId = domain.Id,
+                        };
+
+                        photo.CopyTo(target);
+                        files.ImageData = target.ToArray();
+
+                        _context.FileToDatabase.Add(files);
+                    }
+                }
+            }
+        }
+        public void UploadFilesToDatabase(CarDto dto, Car domain)
+        {
+            if (dto.Files != null && dto.Files.Count > 0)
+            {
+                foreach (var photo in dto.Files)
+                {
+                    using (var target = new MemoryStream())
+                    {
+                        FileToDatabase files = new FileToDatabase()
+                        {
+                            Id = Guid.NewGuid(),
+                            ImageTitle = photo.FileName,
+                            EntityId = domain.Id,
                         };
 
                         photo.CopyTo(target);
@@ -75,9 +99,9 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             string uniqueFileName = null;
             if (dto.Files != null && dto.Files.Count > 0)
             {
-                if (!Directory.Exists(_webHost.WebRootPath + "\\multipleFileUpdload\\"))
+                if (!Directory.Exists(_webHost.WebRootPath + "\\multipleFileUpload\\"))
                 {
-                    Directory.CreateDirectory(_webHost.WebRootPath + "\\multipleFileUpdload\\");
+                    Directory.CreateDirectory(_webHost.WebRootPath + "\\multipleFileUpload\\");
                 }
                 foreach (var image in dto.Files)
                 {
@@ -91,7 +115,35 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                         {
                             Id = Guid.NewGuid(),
                             ExistingFilePath = uniqueFileName,
-                            RealEstateId = realEstate.Id,
+                            EntityId = realEstate.Id,
+                        };
+                        _context.FilesToApi.AddAsync(path);
+                    }
+                }
+            }
+        }
+        public void FilesToApi(CarDto dto, Car car)
+        {
+            string uniqueFileName = null;
+            if (dto.Files != null && dto.Files.Count > 0)
+            {
+                if (!Directory.Exists(_webHost.WebRootPath + "\\multipleFileUpload\\"))
+                {
+                    Directory.CreateDirectory(_webHost.WebRootPath + "\\multipleFileUpload\\");
+                }
+                foreach (var image in dto.Files)
+                {
+                    string uploadsFolder = Path.Combine(_webHost.WebRootPath, "multipleFileUpload");
+                    uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        image.CopyTo(fileStream);
+                        FileToApi path = new FileToApi()
+                        {
+                            Id = Guid.NewGuid(),
+                            ExistingFilePath = uniqueFileName,
+                            EntityId = car.Id,
                         };
                         _context.FilesToApi.AddAsync(path);
                     }
@@ -127,5 +179,6 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             await _context.SaveChangesAsync();
             return null;
         }
+
     }
 }

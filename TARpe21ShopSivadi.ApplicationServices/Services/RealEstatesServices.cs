@@ -101,11 +101,11 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                 .Include(x => x.FilesToApi)
                 .FirstOrDefaultAsync(x => x.Id == id);
             var images = await _context.FilesToApi
-                .Where(x => x.RealEstateId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new FileToApiDto
                 {
                     Id = y.Id,
-                    RealEstateId = y.RealEstateId,
+                    EntityId = y.EntityId,
                     ExistingFilePath = y.ExistingFilePath
                 }).ToArrayAsync();
             await _filesServices.RemoveImagesFromApi(images);

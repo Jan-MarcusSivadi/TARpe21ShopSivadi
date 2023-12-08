@@ -136,6 +136,12 @@ namespace TARpe21ShopSivadi.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("CarId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("EntityId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("ExistingFilePath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -144,6 +150,8 @@ namespace TARpe21ShopSivadi.Data.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CarId");
 
                     b.HasIndex("RealEstateId");
 
@@ -156,6 +164,9 @@ namespace TARpe21ShopSivadi.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("EntityId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<byte[]>("ImageData")
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
@@ -163,9 +174,6 @@ namespace TARpe21ShopSivadi.Data.Migrations
                     b.Property<string>("ImageTitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("SpaceshipId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -331,9 +339,18 @@ namespace TARpe21ShopSivadi.Data.Migrations
 
             modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.FileToApi", b =>
                 {
+                    b.HasOne("TARpe21ShopSivadi.Core.Domain.Car", null)
+                        .WithMany("FilesToApi")
+                        .HasForeignKey("CarId");
+
                     b.HasOne("TARpe21ShopSivadi.Core.Domain.RealEstate", null)
                         .WithMany("FilesToApi")
                         .HasForeignKey("RealEstateId");
+                });
+
+            modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.Car", b =>
+                {
+                    b.Navigation("FilesToApi");
                 });
 
             modelBuilder.Entity("TARpe21ShopSivadi.Core.Domain.RealEstate", b =>

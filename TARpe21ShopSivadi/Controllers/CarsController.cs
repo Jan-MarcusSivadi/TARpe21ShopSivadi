@@ -14,10 +14,12 @@ namespace TARpe21ShopSivadi.Controllers
     {
         private readonly TARpe21ShopSivadiContext _context;
         private readonly ICarsServices _carsServices;
-        public CarsController(TARpe21ShopSivadiContext context, ICarsServices carsServices)
+        private readonly IFilesServices _filesServices;
+        public CarsController(TARpe21ShopSivadiContext context, ICarsServices carsServices, IFilesServices filesServices)
         {
             _context = context;
             _carsServices = carsServices;
+            _filesServices = filesServices;
         }
         public IActionResult Index()
         {
@@ -42,6 +44,13 @@ namespace TARpe21ShopSivadi.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+                .Where(x => x.EntityId == id)
+                .Select(y => new FileToApiViewModel
+                {
+                    FilePath = y.ExistingFilePath,
+                    ImageId = y.Id
+                }).ToArrayAsync();
 
             var vm = new CarDetailsDeleteViewModel();
             vm.Id = car.Id;
@@ -75,6 +84,7 @@ namespace TARpe21ShopSivadi.Controllers
             vm.ModifiedAt = car.ModifiedAt;
             vm.CreatedAt = car.CreatedAt;
             vm.IsDelete = false;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View("DetailsDelete", vm);
         }
@@ -119,6 +129,14 @@ namespace TARpe21ShopSivadi.Controllers
                 LastMaintenance = vm.LastMaintenance,
                 CreatedAt = vm.CreatedAt,
                 ModifiedAt = vm.ModifiedAt,
+                Files = vm.Files,
+                FilesToApiDtos = vm.FileToApiViewModels
+                .Select(z => new FileToApiDto
+                {
+                    Id = z.ImageId,
+                    ExistingFilePath = z.FilePath,
+                    EntityId = z.CarId,
+                }).ToArray()
             };
             var result = await _carsServices.Create(dto);
             if (result == null)
@@ -136,6 +154,13 @@ namespace TARpe21ShopSivadi.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+                .Where(x => x.EntityId == id)
+                .Select(y => new FileToApiViewModel
+                {
+                    FilePath = y.ExistingFilePath,
+                    ImageId = y.Id
+                }).ToArrayAsync();
 
             var vm = new CarCreateUpdateViewModel();
             vm.Id = car.Id;
@@ -166,8 +191,9 @@ namespace TARpe21ShopSivadi.Controllers
             vm.BuiltAtDate = car.BuiltAtDate;
             vm.MaintenanceCount = car.MaintenanceCount;
             vm.LastMaintenance = car.LastMaintenance;
-            vm.ModifiedAt = car.ModifiedAt;
             vm.CreatedAt = car.CreatedAt;
+            vm.ModifiedAt = car.ModifiedAt;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View("CreateUpdate", vm);
         }
@@ -206,6 +232,14 @@ namespace TARpe21ShopSivadi.Controllers
                 LastMaintenance = vm.LastMaintenance,
                 CreatedAt = vm.CreatedAt,
                 ModifiedAt = vm.ModifiedAt,
+                Files = vm.Files,
+                FilesToApiDtos = vm.FileToApiViewModels
+                .Select(z => new FileToApiDto
+                {
+                    Id = z.ImageId,
+                    ExistingFilePath = z.FilePath,
+                    EntityId = z.CarId,
+                }).ToArray()
             };
             var result = await _carsServices.Update(dto);
             if (result == null)
@@ -222,6 +256,13 @@ namespace TARpe21ShopSivadi.Controllers
             {
                 return NotFound();
             }
+            var images = await _context.FilesToApi
+                .Where(x => x.EntityId == id)
+                .Select(y => new FileToApiViewModel
+                {
+                    FilePath = y.ExistingFilePath,
+                    ImageId = y.Id
+                }).ToArrayAsync();
 
             var vm = new CarDetailsDeleteViewModel();
             vm.Id = car.Id;
@@ -255,6 +296,7 @@ namespace TARpe21ShopSivadi.Controllers
             vm.ModifiedAt = car.ModifiedAt;
             vm.CreatedAt = car.CreatedAt;
             vm.IsDelete = true;
+            vm.FileToApiViewModels.AddRange(images);
 
             return View("DetailsDelete", vm);
         }
@@ -263,6 +305,20 @@ namespace TARpe21ShopSivadi.Controllers
         {
             var result = await _carsServices.Delete(id);
             if (result == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpPost]
+        public async Task<IActionResult> RemoveImage(FileToApiViewModel vm)
+        {
+            var dto = new FileToApiDto()
+            {
+                Id = vm.ImageId
+            };
+            var image = await _filesServices.RemoveImageFromApi(dto);
+            if (image == null)
             {
                 return RedirectToAction(nameof(Index));
             }

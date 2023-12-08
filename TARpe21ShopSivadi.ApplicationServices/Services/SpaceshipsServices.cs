@@ -102,12 +102,12 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             var images = await _context.FileToDatabase
-                .Where(x => x.SpaceshipId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new FileToDatabaseDto
                 {
                     Id = y.Id,
                     ImageTitle = y.ImageTitle,
-                    SpaceshipId = y.SpaceshipId,
+                    EntityId = y.EntityId,
                 }).ToArrayAsync();
 
             await _files.RemoveImagesFromDatabase(images);

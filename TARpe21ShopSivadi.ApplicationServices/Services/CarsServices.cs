@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 using TARpe21ShopSivadi.Core.Domain;
 using TARpe21ShopSivadi.Core.Dto;
@@ -16,9 +17,11 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
     public class CarsServices : ICarsServices
     {
         private readonly TARpe21ShopSivadiContext _context;
-        public CarsServices(TARpe21ShopSivadiContext context)
+        private readonly IFilesServices _filesServices;
+        public CarsServices(TARpe21ShopSivadiContext context, IFilesServices filesServices)
         {
             _context = context;
+            _filesServices = filesServices;
         }
 
         public async Task<Car> Create(CarDto dto)
@@ -54,7 +57,7 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             car.LastMaintenance = dto.LastMaintenance;
             car.CreatedAt = dto.CreatedAt;
             car.ModifiedAt = dto.ModifiedAt;
-            // TODO: upload images
+            _filesServices.FilesToApi(dto, car);
 
             await _context.Cars.AddAsync(car);
             await _context.SaveChangesAsync();
@@ -71,7 +74,7 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
 
         public async Task<Car> Update(CarDto dto)
         {
-            var domain = new Car
+            var car = new Car
             {
                 Id = dto.Id,
                 Name = dto.Name,
@@ -102,17 +105,28 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                 LastMaintenance = dto.LastMaintenance,
                 CreatedAt = dto.CreatedAt,
                 ModifiedAt = DateTime.Now,
-            };
-            // update images
 
-            _context.Cars.Update(domain);
+            };
+            _filesServices.FilesToApi(dto, car);
+
+            _context.Cars.Update(car);
             await _context.SaveChangesAsync();
-            return domain;
+            return car;
         }
         public async Task<Car> Delete(Guid id)
         {
             var carId = await _context.Cars
+                .Include(x => x.FilesToApi)
                 .FirstOrDefaultAsync(x => x.Id == id);
+            var images = await _context.FilesToApi
+                .Where(x => x.EntityId == id)
+                .Select(y => new FileToApiDto
+                {
+                    Id = y.Id,
+                    EntityId = y.EntityId,
+                    ExistingFilePath = y.ExistingFilePath
+                }).ToArrayAsync();
+            await _filesServices.RemoveImagesFromApi(images);
             _context.Cars.Remove(carId);
             await _context.SaveChangesAsync();
             return carId;

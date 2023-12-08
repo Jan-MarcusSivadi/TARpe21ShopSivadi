@@ -75,7 +75,7 @@ namespace TARpe21ShopSivadi.Controllers
                     Id = x.ImageId,
                     ImageData = x.ImageData,
                     ImageTitle = x.ImageTitle,
-                    SpaceshipId = x.SpaceshipId,
+                    EntityId = x.SpaceshipId,
                 }).ToArray()
             };
             var result = await _spaceshipsServices.Create(dto);
@@ -95,13 +95,13 @@ namespace TARpe21ShopSivadi.Controllers
             }
 
             var photos = await _context.FileToDatabase
-                .Where(x => x.SpaceshipId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new ImageViewModel
                 {
                     ImageId = y.Id,
                     ImageData = y.ImageData,
                     ImageTitle = y.ImageTitle,
-                    SpaceshipId = y.SpaceshipId,
+                    SpaceshipId = y.EntityId,
                     Image = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(y.ImageData))
                 }).ToArrayAsync();
 
@@ -158,7 +158,7 @@ namespace TARpe21ShopSivadi.Controllers
                     Id = x.ImageId,
                     ImageData = x.ImageData,
                     ImageTitle = x.ImageTitle,
-                    SpaceshipId = x.SpaceshipId,
+                    EntityId = x.SpaceshipId,
                 }).ToArray()
             };
             var result = await _spaceshipsServices.Update(dto);
@@ -189,13 +189,13 @@ namespace TARpe21ShopSivadi.Controllers
             }
 
             var photos = await _context.FileToDatabase
-                .Where(x => x.SpaceshipId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new ImageViewModel
                 {
                     ImageId = y.Id,
                     ImageData = y.ImageData,
                     ImageTitle = y.ImageTitle,
-                    SpaceshipId = y.SpaceshipId,
+                    SpaceshipId = y.EntityId,
                     Image = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(y.ImageData))
                 }).ToArrayAsync();
 
@@ -234,13 +234,13 @@ namespace TARpe21ShopSivadi.Controllers
             }
 
             var photos = await _context.FileToDatabase
-                .Where(x => x.SpaceshipId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new ImageViewModel
                 {
                     ImageId = y.Id,
                     ImageData = y.ImageData,
                     ImageTitle = y.ImageTitle,
-                    SpaceshipId = y.SpaceshipId,
+                    SpaceshipId = y.EntityId,
                     Image = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(y.ImageData))
                 }).ToArrayAsync();
 

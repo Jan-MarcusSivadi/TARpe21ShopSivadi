@@ -245,6 +245,22 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\wwwroot\\multipleFileUpload\\4c31ddcb-6e69-4d5c-b0c7-5c172e53a94e_65897812_120883965865865_6049329393621836699_n.jpg",
+      "PackagePath": "staticwebassets\\multipleFileUpload\\4c31ddcb-6e69-4d5c-b0c7-5c172e53a94e_65897812_120883965865865_6049329393621836699_n.jpg"
+    },
+    {
+      "Id": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\wwwroot\\multipleFileUpload\\914cf75c-8711-40d8-b44b-71358b7c665e_uwp1226412.png",
+      "PackagePath": "staticwebassets\\multipleFileUpload\\914cf75c-8711-40d8-b44b-71358b7c665e_uwp1226412.png"
+    },
+    {
+      "Id": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\wwwroot\\multipleFileUpload\\a241e2d9-7fa2-496e-a800-43d1c3db8c2d_uwp1226412.png",
+      "PackagePath": "staticwebassets\\multipleFileUpload\\a241e2d9-7fa2-496e-a800-43d1c3db8c2d_uwp1226412.png"
+    },
+    {
+      "Id": "D:\\Dev Projects\\School\\Programmeerimine\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\wwwroot\\multipleFileUpload\\d31ce779-2758-45f7-8b16-b17d0e24c0ff_65897812_120883965865865_6049329393621836699_n.jpg",
+      "PackagePath": "staticwebassets\\multipleFileUpload\\d31ce779-2758-45f7-8b16-b17d0e24c0ff_65897812_120883965865865_6049329393621836699_n.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.TARpe21ShopSivadi.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -38,7 +39,8 @@ namespace TARpe21ShopSivadi.Core.Dto
         public DateTime BuiltAtDate { get; set; } // the date this car was built at
         public int MaintenanceCount { get; set; } // how many maintenance sessions have been conducted on this car
         public DateTime LastMaintenance { get; set; } // when was the last maintenance performed
-
+        public List<IFormFile> Files { get; set; } // Files that are to be added to this car
+        public IEnumerable<FileToApiDto> FilesToApiDtos { get; set; } = new List<FileToApiDto>(); // files themselves that are added
 
         // only in database
         public DateTime CreatedAt { get; set; }

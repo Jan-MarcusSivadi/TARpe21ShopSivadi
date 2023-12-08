@@ -10,6 +10,6 @@ namespace TARpe21ShopSivadi.Core.Domain
     {
         public Guid Id { get; set; }
         public string ExistingFilePath { get; set; }
-        public Guid? RealEstateId { get; set; }
+        public Guid? EntityId { get; set; }
     }
 }

@@ -33,8 +33,9 @@ namespace TARpe21ShopSivadi.Models.Car
         public DateTime BuiltAtDate { get; set; } // the date this car was built at
         public int MaintenanceCount { get; set; } // how many maintenance sessions have been conducted on this car
         public DateTime LastMaintenance { get; set; } // when was the last maintenance performed
-
         public bool IsDelete { get; set; } // is car delete view active
+
+        public List<FileToApiViewModel> FileToApiViewModels { get; set; } = new List<FileToApiViewModel>(); // file viewmodels
 
 
         // only in database

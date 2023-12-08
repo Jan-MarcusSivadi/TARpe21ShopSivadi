@@ -83,7 +83,7 @@ namespace TARpe21ShopSivadi.Controllers
                 {
                     Id = z.ImageId,
                     ExistingFilePath = z.FilePath,
-                    RealEstateId = z.RealEstateId,
+                    EntityId = z.RealEstateId,
                 }).ToArray()
             };
             var result = await _realEstates.Create(dto);
@@ -102,7 +102,7 @@ namespace TARpe21ShopSivadi.Controllers
                 return NotFound();
             }
             var images = await _context.FilesToApi
-                .Where(x => x.RealEstateId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new FileToApiViewModel
                 {
                     FilePath = y.ExistingFilePath,
@@ -175,7 +175,7 @@ namespace TARpe21ShopSivadi.Controllers
                 {
                     Id = z.ImageId,
                     ExistingFilePath = z.FilePath,
-                    RealEstateId = z.RealEstateId,
+                    EntityId = z.RealEstateId,
                 }).ToArray()
             };
 
@@ -196,7 +196,7 @@ namespace TARpe21ShopSivadi.Controllers
                 return NotFound();
             }
             var images = await _context.FilesToApi
-                .Where(x => x.RealEstateId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new FileToApiViewModel
                 {
                     FilePath = y.ExistingFilePath,
@@ -243,7 +243,7 @@ namespace TARpe21ShopSivadi.Controllers
                 return NotFound();
             }
             var images = await _context.FilesToApi
-                .Where(x => x.RealEstateId == id)
+                .Where(x => x.EntityId == id)
                 .Select(y => new FileToApiViewModel
                 {
                     FilePath = y.ExistingFilePath,
@@ -282,8 +282,8 @@ namespace TARpe21ShopSivadi.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteConfirmation(Guid id)
         {
-            var realEstate = await _realEstates.GetAsync(id);
-            if (realEstate == null)
+            var result = await _realEstates.Delete(id);
+            if (result == null)
             {
                 return RedirectToAction(nameof(Index));
             }

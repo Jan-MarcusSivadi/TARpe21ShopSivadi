@@ -960,6 +960,70 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\4c31ddcb-6e69-4d5c-b0c7-5c172e53a94e_65897812_120883965865865_6049329393621836699_n.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe21ShopSivadi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe21ShopSivadi</BasePath>
+      <RelativePath>multipleFileUpload/4c31ddcb-6e69-4d5c-b0c7-5c172e53a94e_65897812_120883965865865_6049329393621836699_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\4c31ddcb-6e69-4d5c-b0c7-5c172e53a94e_65897812_120883965865865_6049329393621836699_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\914cf75c-8711-40d8-b44b-71358b7c665e_uwp1226412.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe21ShopSivadi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe21ShopSivadi</BasePath>
+      <RelativePath>multipleFileUpload/914cf75c-8711-40d8-b44b-71358b7c665e_uwp1226412.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\914cf75c-8711-40d8-b44b-71358b7c665e_uwp1226412.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\a241e2d9-7fa2-496e-a800-43d1c3db8c2d_uwp1226412.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe21ShopSivadi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe21ShopSivadi</BasePath>
+      <RelativePath>multipleFileUpload/a241e2d9-7fa2-496e-a800-43d1c3db8c2d_uwp1226412.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\a241e2d9-7fa2-496e-a800-43d1c3db8c2d_uwp1226412.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\d31ce779-2758-45f7-8b16-b17d0e24c0ff_65897812_120883965865865_6049329393621836699_n.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>TARpe21ShopSivadi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TARpe21ShopSivadi</BasePath>
+      <RelativePath>multipleFileUpload/d31ce779-2758-45f7-8b16-b17d0e24c0ff_65897812_120883965865865_6049329393621836699_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\multipleFileUpload\d31ce779-2758-45f7-8b16-b17d0e24c0ff_65897812_120883965865865_6049329393621836699_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\TARpe21ShopSivadi.bundle.scp.css))">
       <SourceType>Package</SourceType>
       <SourceId>TARpe21ShopSivadi</SourceId>
