@@ -140,11 +140,6 @@ C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\TARpe21ShopSivadi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\TARpe21ShopSivadi.RazorAssemblyInfo.cache
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\TARpe21ShopSivadi.RazorAssemblyInfo.cs
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\staticwebassets\msbuild.TARpe21ShopSivadi.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\staticwebassets\msbuild.build.TARpe21ShopSivadi.props
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TARpe21ShopSivadi.props
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.TARpe21ShopSivadi.props
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\TARpe21ShopSivadi\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

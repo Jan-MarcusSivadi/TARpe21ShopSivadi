@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +10,7 @@ using TARpe21ShopSivadi.ApplicationServices.Services;
 using TARpe21ShopSivadi.Core.ServiceInterface;
 using TARpe21ShopSivadi.Data;
 using TARpe21ShopSivadi.SpaceshipTest.Macros;
+using Microsoft.Extensions.Hosting;
 using TARpe21ShopSivadi.SpaceshipTest.Mock;
 
 namespace TARpe21ShopSivadi.SpaceshipTest

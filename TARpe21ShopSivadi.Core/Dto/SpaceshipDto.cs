@@ -40,5 +40,9 @@ namespace TARpe21ShopSivadi.Core.Dto
         public DateTime CreatedAt { get; set; } // when the entry was created
         public DateTime ModifiedAt { get; set; } // when the entry has been modified last
 
+        public static explicit operator SpaceshipDto(Spaceship v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

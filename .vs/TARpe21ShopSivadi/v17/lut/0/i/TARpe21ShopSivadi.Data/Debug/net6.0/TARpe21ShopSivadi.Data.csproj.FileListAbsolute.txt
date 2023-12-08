@@ -1,0 +1,12 @@
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\b\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.deps.json
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\b\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.runtimeconfig.json
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\b\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.AssemblyReference.cache
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.AssemblyInfoInputs.cache
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.AssemblyInfo.cs
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.csproj.CopyComplete
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\refint\TARpe21ShopSivadi.Data.dll
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\TARpe21ShopSivadi.Data.genruntimeconfig.cache
+C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.Data\Debug\net6.0\ref\TARpe21ShopSivadi.Data.dll
