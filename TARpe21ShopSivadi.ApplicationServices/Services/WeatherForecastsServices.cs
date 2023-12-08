@@ -9,14 +9,55 @@ using System.Text;
 using System.Threading.Tasks;
 using TARpe21ShopSivadi.Core.Dto.WeatherDtos;
 using TARpe21ShopSivadi.Core.ServiceInterface;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace TARpe21ShopSivadi.ApplicationServices.Services
 {
     public class WeatherForecastsServices : IWeatherForecastsServices
     {
+        private async Task<Tuple<string, string>> GetLatLonByCity(string cityname, string apiKey)
+        {
+            var url = $"https://geocode.maps.co/search?q=${cityname}";
+            int statusCode = 200;
+            string lat = "";
+            string lon = "";
+
+            JObject joResponse;
+            WebClient client = new WebClient();
+            try
+            {
+                // send request
+                string json = client.DownloadString(url);
+                List<JObject> array = JsonConvert.DeserializeObject<List<JObject>>(json);
+                JObject jsonObject = array[0];
+
+                lat = (string)jsonObject.GetValue("lat");
+                lon = (string)jsonObject.GetValue("lon");
+
+                if (lat == "" || lat == "")
+                {
+                    return null;
+                }
+            }
+            catch (WebException e)
+            {
+                // check e.Status as above etc..
+                int errStatusCode = (int)((HttpWebResponse)e.Response).StatusCode;
+                Console.WriteLine("Status code: " + errStatusCode);
+                statusCode = errStatusCode;
+            }
+
+            return Tuple.Create(lat, lon);
+        }
         public async Task<(WeatherResultDto, int)> WeatherDetail(WeatherResultDto dto)
         {
-            var url = $"http://dataservice.accuweather.com/forecasts/v1/daily/1day/127964?apikey=ajoMB4nzkuQLNPJTKxFdGdGWDaSepqsg&metric=true";
+            var apiKey = "083cda02bfad9bd51855a6a23e900b69";
+            Tuple<string, string> geoResult = await GetLatLonByCity("Tallinn", apiKey).ConfigureAwait(false);
+            string lat = geoResult.Item1;
+            string lon = geoResult.Item2;
+            Console.WriteLine("TEST:" + "lat: " + lat + " lon: " + lon);
+            var url = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}";
 
             int statusCode = 200;
             WebClient client = new WebClient();
@@ -24,6 +65,15 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
             {
                 // send request
                 string json = client.DownloadString(url);
+                object deserialized = JsonConvert.DeserializeObject<object>(json);
+                JObject jsonObject = (JObject)deserialized;
+                Console.WriteLine("API response.body: " + deserialized);
+
+                //JArray weather = (JArray)jsonObject.GetValue("weather");
+                //Console.WriteLine("jToken weather: " + weather);
+                //lat = (string)jsonObject.GetValue("lat");
+                //lon = (string)jsonObject.GetValue("lon");
+
                 WeatherRootDto weatherInfo = (new JavaScriptSerializer()).Deserialize<WeatherRootDto>(json);
 
                 Console.WriteLine("WEATHER API: " + weatherInfo);
@@ -65,7 +115,8 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                 statusCode = errStatusCode;
             }
 
-            return (dto, statusCode);
+            //return (dto, statusCode);
+            return (dto, 200);
         }
     }
 }

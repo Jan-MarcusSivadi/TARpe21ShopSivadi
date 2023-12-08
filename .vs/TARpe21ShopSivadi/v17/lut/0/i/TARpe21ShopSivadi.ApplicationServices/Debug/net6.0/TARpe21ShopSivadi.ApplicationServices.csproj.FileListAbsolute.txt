@@ -1,12 +1,4 @@
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\b\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.deps.json
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\b\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.runtimeconfig.json
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\b\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.dll
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.csproj.AssemblyReference.cache
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.AssemblyInfoInputs.cache
 C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.AssemblyInfo.cs
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.csproj.CopyComplete
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.dll
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\refint\TARpe21ShopSivadi.ApplicationServices.dll
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\TARpe21ShopSivadi.ApplicationServices.genruntimeconfig.cache
-C:\Users\opilane\source\repos\TARpe21ShopSivadi\.vs\TARpe21ShopSivadi\v17\lut\0\i\TARpe21ShopSivadi.ApplicationServices\Debug\net6.0\ref\TARpe21ShopSivadi.ApplicationServices.dll

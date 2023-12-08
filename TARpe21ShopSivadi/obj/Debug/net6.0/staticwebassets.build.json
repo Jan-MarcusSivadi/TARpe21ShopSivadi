@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fAe79f6E1msMoOokblaOULpgMCDWTW0FbYTbB6OUFUU=",
+  "Hash": "W6w9aOqH1EwjRemCFhAbgF/WuwTA1zQsXOT5Li4lIzM=",
   "Source": "TARpe21ShopSivadi",
   "BasePath": "_content/TARpe21ShopSivadi",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TARpe21ShopSivadi.styles.css",
+      "Identity": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\.vs\\TARpe21ShopSivadi\\v17\\lut\\0\\i\\TARpe21ShopSivadi\\net6.0\\scopedcss\\bundle\\TARpe21ShopSivadi.styles.css",
       "SourceId": "TARpe21ShopSivadi",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\.vs\\TARpe21ShopSivadi\\v17\\lut\\0\\i\\TARpe21ShopSivadi\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/TARpe21ShopSivadi",
       "RelativePath": "TARpe21ShopSivadi.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TARpe21ShopSivadi.styles.css"
+      "OriginalItemSpec": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\.vs\\TARpe21ShopSivadi\\v17\\lut\\0\\i\\TARpe21ShopSivadi\\net6.0\\scopedcss\\bundle\\TARpe21ShopSivadi.styles.css"
     },
     {
-      "Identity": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TARpe21ShopSivadi.bundle.scp.css",
+      "Identity": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\.vs\\TARpe21ShopSivadi\\v17\\lut\\0\\i\\TARpe21ShopSivadi\\net6.0\\scopedcss\\projectbundle\\TARpe21ShopSivadi.bundle.scp.css",
       "SourceId": "TARpe21ShopSivadi",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\.vs\\TARpe21ShopSivadi\\v17\\lut\\0\\i\\TARpe21ShopSivadi\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/TARpe21ShopSivadi",
       "RelativePath": "TARpe21ShopSivadi.bundle.scp.css",
       "AssetKind": "All",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TARpe21ShopSivadi.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\.vs\\TARpe21ShopSivadi\\v17\\lut\\0\\i\\TARpe21ShopSivadi\\net6.0\\scopedcss\\projectbundle\\TARpe21ShopSivadi.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\opilane\\source\\repos\\TARpe21ShopSivadi\\TARpe21ShopSivadi\\wwwroot\\css\\site.css",
