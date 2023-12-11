@@ -43,11 +43,13 @@ namespace TARpe21ShopSivadi.Controllers
 
             WeatherViewModel vm = new();
 
+            vm.EpochDate = dto.EpochDate;
             vm.Date = dto.EffectiveDate;
             vm.Category = dto.Category;
             vm.Description = dto.Description;
+            vm.City = dto.City;
             vm.Location = dto.Location;
-            vm.Icon = dto.Icon;
+            vm.Icon = $"https://openweathermap.org/img/wn/{dto.Icon}.png";
 
             vm.FeelsLike = dto.Feels_Like;
             vm.Temp = (int)dto.Temp;

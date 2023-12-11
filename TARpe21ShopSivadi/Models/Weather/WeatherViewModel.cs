@@ -4,7 +4,7 @@ namespace TARpe21ShopSivadi.Models.Weather
 {
     public class WeatherViewModel
     {
-        //public int EpochDate { get; set; }
+        public int EpochDate { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
         public string Category { get; set; }
@@ -23,5 +23,6 @@ namespace TARpe21ShopSivadi.Models.Weather
         public double FeelsLike { get; set; }
         public int Timezone { get; set; }
         public string Location { get; set; }
+        public string City { get; set; }
     }
 }

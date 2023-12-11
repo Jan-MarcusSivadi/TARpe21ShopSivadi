@@ -100,6 +100,7 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                 Console.WriteLine("location: " + weatherInfo.Name);
 
                 // convert API data to DTO for frontend
+                dto.EpochDate = weatherInfo.Dt;
                 dto.EffectiveDate = weatherInfo.EffectiveDate;
                 dto.Category = weatherInfo.Weather[0].Main;
                 dto.Description = weatherInfo.Weather[0].Description;
@@ -114,6 +115,8 @@ namespace TARpe21ShopSivadi.ApplicationServices.Services
                 dto.WindSpeed = weatherInfo.Wind.Speed;
                 dto.WindDeg = weatherInfo.Wind.Deg;
                 dto.CloudsAll = weatherInfo.Clouds.All;
+                dto.Location = weatherInfo.Name;
+                dto.City = loactionCityname;
             }
             catch (WebException e)
             {

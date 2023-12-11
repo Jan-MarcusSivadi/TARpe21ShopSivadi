@@ -1,6 +1,6 @@
 ﻿namespace TARpe21ShopSivadi.Core.Dto.WeatherDtos
 {
-    public class Clouds
+    public class CloudsDto
     {
         public int All { get; set; }
     }

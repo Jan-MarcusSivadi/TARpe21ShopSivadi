@@ -19,6 +19,34 @@ body {
     color: whitesmoke;*/
 }
 
+.weather-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.weather-icon img {
+    border-radius: 8px;
+    /*width: 80px;*/
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background: transparent;
+    filter: drop-shadow(5px 0 0 white) drop-shadow(0 5px 0 white) drop-shadow(-5px 0 0 white) drop-shadow(0 -5px 0 white) !important;
+}
+.weather-icon2 img {
+    display: flex;
+    width: 50px;
+    /*margin: 0 10px;*/
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background: transparent;
+    --stroke-pos: 1px;
+    --stroke-neg: -1px;
+    --stroke-color: black;
+    filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
+}
+
 /**, html {
     background: #242322;
     color: whitesmoke;

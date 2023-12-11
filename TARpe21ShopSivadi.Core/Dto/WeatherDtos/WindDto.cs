@@ -1,6 +1,6 @@
 ﻿namespace TARpe21ShopSivadi.Core.Dto.WeatherDtos
 {
-    public class Wind
+    public class WindDto
     {
         public double Speed { get; set; }
         public int Deg { get; set; }

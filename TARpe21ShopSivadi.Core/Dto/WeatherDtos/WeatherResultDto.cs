@@ -8,6 +8,7 @@ namespace TARpe21ShopSivadi.Core.Dto.WeatherDtos
 {
     public class WeatherResultDto
     {
+        public int EpochDate { get; set; }
         public DateTime EffectiveDate { get; set; }
         public string Category { get; set; }
         public string Description { get; set; }
@@ -28,6 +29,7 @@ namespace TARpe21ShopSivadi.Core.Dto.WeatherDtos
         public int CloudsAll { get; set; }
 
         public string Location { get; set; }
+        public string City { get; set; }
 
         //public DateTime EffectiveDate { get; set; }
         //public int EffectiveEpochDate { get; set; }
