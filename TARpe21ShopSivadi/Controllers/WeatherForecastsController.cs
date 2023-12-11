@@ -33,7 +33,7 @@ namespace TARpe21ShopSivadi.Controllers
         {
             WeatherResultDto dto = new();
 
-            var serviceResult = await _weatherForecastServices.WeatherDetail(dto);
+            var serviceResult = await _weatherForecastServices.WeatherDetail(dto, "Tallinn");
             int statusCode = serviceResult.Item2;
             await Console.Out.WriteLineAsync("STATUS CODE: " + statusCode);
             if (statusCode == 503)
@@ -44,32 +44,22 @@ namespace TARpe21ShopSivadi.Controllers
             WeatherViewModel vm = new();
 
             vm.Date = dto.EffectiveDate;
-            vm.EpochDate = dto.EffectiveEpochDate;
-            vm.Severity = dto.Severity;
-            vm.Text = dto.Text;
-            vm.MobileLink = dto.MobileLink;
-            vm.Link = dto.Link;
             vm.Category = dto.Category;
+            vm.Description = dto.Description;
+            vm.Location = dto.Location;
+            vm.Icon = dto.Icon;
 
-            vm.TempMinValue = dto.TempMinValue;
-            vm.TempMinUnit = dto.TempMinUnit;
-            vm.TempMinUnitType = dto.TempMinUnitType;
+            vm.FeelsLike = dto.Feels_Like;
+            vm.Temp = (int)dto.Temp;
+            vm.TempMinValue = dto.Temp_Min;
+            vm.TempMaxValue = dto.Temp_Max;
 
-            vm.TempMaxValue = dto.TempMaxValue;
-            vm.TempMaxUnit = dto.TempMaxUnit;
-            vm.TempMaxUnitType = dto.TempMaxUnitType;
-
-            vm.DayIcon = dto.DayIcon;
-            vm.DayIconPhrase = dto.DayIconPhrase;
-            vm.DayHasPrecipitation = dto.DayHasPrecipitation;
-            vm.DayPrecipitationType = dto.DayPrecipitationType;
-            vm.DayPrecipitationIntensity = dto.DayPrecipitationIntensity;
-
-            vm.NightIcon = dto.NightIcon;
-            vm.NightIconPhrase = dto.NightIconPhrase;
-            vm.NightHasPrecipitation = dto.NightHasPrecipitation;
-            vm.NightPrecipitationType = dto.NightPrecipitationType;
-            vm.NightPrecipitationIntensity = dto.NightPrecipitationIntensity;
+            vm.Humidity = dto.Humidity;
+            vm.Pressure = dto.Pressure;
+            vm.WindSpeed = dto.WindSpeed;
+            vm.WindDeg = dto.WindDeg;
+            vm.HasClouds = (dto.CloudsAll / 2 >= 50);
+            vm.Visibility = dto.Visibility;
 
             return View(vm);
 
