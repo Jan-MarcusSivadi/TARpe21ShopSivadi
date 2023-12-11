@@ -1,17 +1,24 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TARpe21ShopSivadi.Core.Utils;
+using System.Text.Json.Serialization;
 
 namespace TARpe21ShopSivadi.Core.Dto.WeatherDtos
 {
+    //[JsonConverter(typeof(JsonPathConverter))]
     public class WeatherRootDto
     {
-        public HeadlineDto Headline { get; set; }
-        public List<DailyForecastsDto> DailyForecasts { get; set; }
-        public int Severity { get; set; }
-        public string Text { get; set; }
-        public string Category { get; set; }
+        public DateTime EffectiveDate { get; set; }
+        public int Dt { get; set; }
+        public List<WeatherDto> Weather { get; set; }
+        public HeadlineDto Main { get; set; }
+        public int Visibility { get; set; }
+        public WindDto Wind { get; set; }
+        public CloudsDto Clouds { get; set; } 
+        public string Name { get; set; }
     }
 }

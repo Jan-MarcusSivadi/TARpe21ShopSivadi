@@ -9,6 +9,6 @@ namespace TARpe21ShopSivadi.Core.ServiceInterface
 {
     public interface IWeatherForecastsServices
     {
-        public Task<(WeatherResultDto, int)> WeatherDetail(WeatherResultDto dto);
+        public Task<(WeatherResultDto, int)> WeatherDetail(WeatherResultDto dto, string cityname);
     }
 }
